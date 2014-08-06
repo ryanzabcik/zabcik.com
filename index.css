@@ -1,0 +1,35 @@
+body {
+    background-color: #314159; /* it's pi! */
+}
+#box {
+    position: absolute;     
+    left: 50%;
+    top: 50%;     
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+h1, h2, a {
+    font-family: 'Lato';
+    color: #fff;
+}
+
+h1 {
+    display: block;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    font-size: 48pt;
+    margin: 0;
+    margin-bottom: 12px;
+    width:500px;
+}
+a {
+    text-decoration: none;
+    margin-right: 1em;
+    padding-bottom: 8px;
+}
+a:hover {
+    border-bottom: 1px solid white;
+}
