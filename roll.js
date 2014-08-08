@@ -2,28 +2,34 @@ function Roller(elem){
 
     this.elem = elem;
 
-    /* array of tulpes of weights and strings */
-    this.things = [
+    this.about_me = [
+        /* [weight, string] */
+        [1, "I love Vim."],
+        [1, "I love Linux."],
+        [1, "I love networking."],
+        [1, "I love math."],
+        [1, "I love haskell."],
+        [1, "I love complex systems."],
         [1, "I keep things organized."],
         [2, "I read papers."],
         [2, "I change often."],
         [2, "I keep an open mind."],
         [2, "I break things."],
-        [2, "I learn every day."],
         [4, "I tweak things."],
         [4, "I study everything."],
         [4, "I think about everything."],
         [4, "I invent things."],
+        [6, "I learn every day."],
         [6, "I design systems."],
         [8, "I write code."],
-        [12, "I solve problems."],
+        [8, "I solve problems."],
     ];
 
-    this.total = this.things.reduce(function(acc, x) {
+    this.total = this.about_me.reduce(function(acc, x) {
         return acc + x[0];
     }, 0);
 
-    this.spin_times = [25,50,75,100,150,200,400,650,1000];
+    this.spin_times = [25,50,75,100,150,200,400,650,900];
 
 }
 
@@ -31,10 +37,10 @@ Roller.prototype.roll = function() {
     var choice = Math.floor(Math.random()*this.total);
     var i;
     var result;
-    for(i = 0; i < this.things.length; i++){
-        choice -= this.things[i][0];
+    for(i = 0; i < this.about_me.length; i++){
+        choice -= this.about_me[i][0];
         if(choice <= 0){
-            result = this.things[i][1];
+            result = this.about_me[i][1];
             break;
         }
     }
