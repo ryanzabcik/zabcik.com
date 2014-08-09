@@ -8,7 +8,7 @@ function Roller(elem){
         [1, "I love Linux."],
         [1, "I love networking."],
         [1, "I love math."],
-        [1, "I love haskell."],
+        [1, "I love Haskell."],
         [1, "I love complex systems."],
         [1, "I keep things organized."],
         [2, "I read papers."],
