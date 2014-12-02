@@ -2,6 +2,8 @@ function Roller(elem){
 
     this.elem = elem;
 
+    this.last = "";
+
     this.about_me = [
         /* [weight, string] */
         [1, "I love Vim."],
@@ -44,7 +46,11 @@ Roller.prototype.roll = function() {
             break;
         }
     }
+    if (result === this.last){
+        result = this.roll();
+    }
     this.elem.innerHTML = result;
+    this.last = result;
     return result;
 }
 
