@@ -1,6 +1,9 @@
 window.onload = function () {
-    var roll_elem = document.getElementById("roller");
-    var roller = new Roller(roll_elem);
-    roll_elem.addEventListener("mouseover", roller.spin.bind(roller));
-    roll_elem.addEventListener("touchstart", roller.spin.bind(roller));
+    var roller = new Roller("roller");
+
+    // Spin on hover over the profile section or click
+    var profileSection = document.querySelector('.profile-section');
+
+    profileSection.addEventListener("mouseenter", () => roller.spin(), { once: true });
+    profileSection.addEventListener("click", () => roller.spin());
 };
